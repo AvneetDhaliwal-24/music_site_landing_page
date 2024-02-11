@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <title>
+        Music Theme Website
+    </title>
+
+    <!-- Using this to make it responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- links to external css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- these are used to incorporate Google fonts to this webpage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Kaushan+Script&family=Macondo&family=Nova+Script&family=Pacifico&family=Protest+Revolution&family=Satisfy&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Code for header -->
+    <header>
+        <!-- Flex Container -->
+        <div class="flex-container-nav">
+            <!-- First flex item: Has the website name -->
+            <div class="flex-item-nav name">
+                <h1>Muzik</h1>
+            </div>
+
+            <!-- Second flex item: contains Navigation links -->
+            <div class="flex-item-nav nav">
+                <nav>
+                    <!-- using input and label for drop down menu for mobile devices -->
+                    <!-- checkbox will be hidden on all the devices except mobile phones. Label contains the icon which will be used to display drop down menu. -->
+                    <input type="checkbox" id="navbar-btn" />
+                    <label for="navbar-btn">&#9776;</label>
+                    <!-- Nav bar links -->
+                    <ul>
+                        <li><a class="navBarLinks" href="">Home</a></li>
+                        <li><a class="navBarLinks" href="#Artists">Genres</a></li>
+                        <li><a class="navBarLinks" href="#Artists">Artists</a></li>
+                        <li><a class="navBarLinks" href="#Albums">Albums</a></li>
+                        <li><a class="navBarLinks" href="#Events">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main heading for the webpage -->
+        <h2 class="heading">Welcome to the Music Site</h2>
+        <!-- Heading for feautred aritist -->
+        <h3 class="heading" id="Artists">Featured Artists</h3>
+
+        <!-- Grid container for all the Artists -->
+        <div class="card-grid-container">
+            <!-- Multiple card for artists. Each card contains an image of artist, their name and music genre.  -->
+
+            <div class="card-grid">
+                <img
+                    src="https://www.billboard.com/wp-content/uploads/2022/07/drake-pr-cr-univseral-music-2022-billboard-pro-1260.jpg?w=942&h=623&crop=1" />
+                <h4>Drake</h4>
+                <p>Genre: R&B, Hip Hop</p>
+            </div>
+
+            <div class="card-grid">
+                <img src="https://i.pinimg.com/736x/66/cc/70/66cc70595733180f53a794804a8b082f.jpg" />
+                <h4>Harry Styles</h4>
+                <p>Genre: Pop</p>
+            </div>
+
+            <div class="card-grid">
+                <img src="https://i.ebayimg.com/images/g/M7gAAOSwxeNgyhUO/s-l1200.webp" />
+                <h4>The Weekend</h4>
+                <p>Genre: Pop, R&B </p>
+            </div>
+
+            <div class="card-grid">
+                <img src="https://pbs.twimg.com/media/FzuL3pCaEAArsZz.jpg:large" />
+                <h4>Diljit Dosanjh</h4>
+                <p>Genre: Pop</p>
+            </div>
+
+            <div class="card-grid">
+                <img
+                    src="https://static01.nyt.com/images/2015/10/25/t-magazine/25tmag-11well_rihanna-t_CA0/25tmag-11well_rihanna-t_CA0-superJumbo-v2.jpg" />
+                <h4>Rihanna </h4>
+                <p>Genre: Pop, R&B</p>
+            </div>
+
+            <div class="card-grid">
+                <img src="https://pbs.twimg.com/profile_images/1442429577654005760/t6EoYEih_400x400.jpg" />
+                <h4>Karan Aujla</h4>
+                <p>Genre: Pop</p>
+            </div>
+
+            <div class="card-grid">
+                <img src="https://i.pinimg.com/originals/37/f1/20/37f120e0946d37592e39e91f4875b722.jpg" />
+                <h4>J Cole</h4>
+                <p>Genre: Hip-Hop</p>
+            </div>
+
+            <div class="card-grid">
+                <img src="https://i.pinimg.com/originals/fd/d0/3f/fdd03f83b7964dd01ebe890cb198e2e3.jpg" />
+                <h4>Ed Sheeran</h4>
+                <p>Genre: Pop</p>
+            </div>
+
+            <div class="card-grid">
+                <img
+                    src="https://scontent.fyzd1-3.fna.fbcdn.net/v/t39.30808-6/349180159_6237282339682175_8307838527331662016_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=GnTTiyvqX0AAX_Kab5I&_nc_ht=scontent.fyzd1-3.fna&oh=00_AfC-kePA35ePnBEAmKtQ7h-D-p8QO1_AdoeyrblNZGRP2g&oe=65CBF39A" />
+                <h4>Talha Anjum</h4>
+                <p>Genre: hip-hop</p>
+            </div>
+
+            <div class="card-grid">
+                <img
+                    src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/13435/hero-13435-54573747.jpg?itok=Abci7KSH" />
+                <h4>Niall Horan</h4>
+                <p>Genre: Pop</p>
+            </div>
+
+            <div class="card-grid last-row-center-element1">
+                <img
+                    src="https://media.gq.com/photos/5b3114ce115c582fd532dfe4/master/w_1600%2Cc_limit/21-savage-GQ-geordie-wood-12.jpg" />
+                <h4>21 Savage</h4>
+                <p>Genre: Hip-Hop</p>
+            </div>
+
+            <div class="card-grid last-row-center-element2">
+                <img
+                    src="https://ew.com/thmb/LblawDJ3cKdDIGIFIZdppZUkNRs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/selena-gomez-e049155b6d914eefae9b48e0cef7f703.jpg" />
+                <h4>Selena Gomez</h4>
+                <p>Genre: Pop</p>
+            </div>
+        </div>
+
+        <!-- This div is for song's released in the past by the artists. When a user click on Albums in the navigation bar it will direct the user to this element-->
+        <div class="audioElements" id="Albums">
+            <h3>Songs</h3>
+            <div>
+                <!-- Audio element contains the song -->
+                <audio controls>
+                    <source src="songs/photograph.mp3" type="audio/mpeg">
+                    <p>Your browser does not support the audio element.</p>
+                </audio>
+                <!-- Singer's name and song name -->
+                <span>Photograph by Ed Sheeran</span>
+            </div>
+            <div>
+                <audio controls>
+                    <source src="songs/love_yourz.mp3" type="audio/mpeg">
+                    <p>Your browser does not support the audio element.</p>
+                </audio>
+                <span>Love Yourz by J. Cole</span>
+            </div>
+            <div>
+                <audio controls>
+                    <source src="songs/save_your_tears.mp3" type="audio/mpeg">
+                    <p>Your browser does not support the audio element.</p>
+                </audio>
+                <span>Save your tears by The Weekend</span>
+            </div>
+            <div>
+                <audio controls>
+                    <source src="songs/as_it_was.mp3" type="audio/mpeg">
+                    <p>Your browser does not support the audio element.</p>
+                </audio>
+                <span>As It Was by Harry Styles</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Div element for upcoming event. Contains a video element -->
+        <div class="upcomingEventsStyle" id="Events">
+            <h3>Upcoming Events</h3>
+            <video controls>
+                <source src="videos/music_video.mp4" type="video/mp4">
+                <source src="videos/music_video_ogg_format.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+
+    <!-- Footer element -->
+    <footer>
+        <p>
+            @2024 Music Site. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>

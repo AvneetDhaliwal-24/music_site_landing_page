@@ -1,0 +1,505 @@
+/* Code for custom Google Font */
+* {
+    font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Root scope level CSS variables. Variable name and its value. I have created variables for background color, font color, card and navbar background color. I 
+also have fluid typography for h1, h2, h3 and h4 elements in html. I have used CSS variables for margin with auto value. */
+:root {
+    --bg-color: black;
+    --text-color: white;
+    --card-hover-bg-color: rgb(43, 41, 41);
+    --h1-fluidText: clamp(1.60rem, 2vw + 2.5rem, 2.6rem);
+    --h2-fluidText: clamp(1.33rem, 2vw + 2rem, 2.50rem);
+    --h3-fluidText: clamp(1rem, 2vw + 1rem, 1.833rem);
+    --h4-fluidText: clamp(0.714rem, 2vw + 1rem, 1.286rem);
+
+    --margin-val-auto: auto;
+}
+
+/* Setting the font-size to the variable created. */
+h1 {
+    font-size: var(--h1-fluidText);
+}
+
+/* setting the font size and resizing the spacing aroung the h2 element. */
+h2 {
+    font-size: var(--h2-fluidText);
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+/* Setting font size of all h3 elements. */
+h3 {
+    font-size: var(--h3-fluidText);
+}
+
+/* Setting background color and text color of whole page. Margin of the whole page is set to zero */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Adjusting the spacing of a tags in the navigation bar. Text decoration removes the underline from a tags. Color is set to while using CSS variables. */
+.navBarLinks {
+    padding: 0.5%;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Flex container for hear */
+.flex-container-nav {
+    /* Makes  it a flex container */
+    display: flex;
+
+    /* Distributes even amount of space around flex items. */
+    justify-content: space-around;
+    /* Aligns all items in center */
+    align-items: center;
+    /* Padding is between border and content. The following line sets it to zero */
+    padding: 0px;
+    /* Width is set to zero meanig it is 100% wide as its parent element. */
+    width: 100%;
+    /* When the box-sizing property is set to border-box, the specified width of an element includes the content width, padding, border, and margin. */
+    box-sizing: border-box;
+    /* sets background color */
+    background-color: var(--bg-color);
+
+    /* using sticky position. Means it will cause the element to stick to its even when scrolling. */
+    position: sticky;
+    /* this line makes sure that element from the top has zero space inbetween.  */
+    top: 0;
+    /* This element specifies the stack order. I used so that the header stays on top of all other elments when overlapped. */
+    z-index: 10;
+    max-width: 100%;
+}
+
+.flex-item-nav {
+    margin: 2px;
+}
+
+.name {
+    padding-left: 12.5%;
+}
+
+
+.nav {
+    /* This sets the remaing available space in flex container to an element. I am setting it to 2 so that it takes 2 times the availabale space. */
+    flex-grow: 2;
+    /* aligns the navbar a tags to the right */
+    text-align: right;
+    padding-right: 13.5%;
+}
+
+.heading {
+    /* aligns text to center */
+    text-align: center;
+}
+
+/* CSS for the Artist Card container */
+.card-grid-container {
+    padding: 0px;
+    width: 80%;
+    margin: var(--margin-val-auto);
+    /* This positions the items in the center of the grid container. */
+    justify-content: center;
+
+    /* makes the element a grid element */
+    display: grid;
+    /* Sets the gap between the rows */
+    grid-row-gap: 5%;
+    /* Sets the gap between columns */
+    grid-column-gap: 1%;
+    /* Tells the grid that it will have 6 columns and its size. It repeats this for rows until all the elements are placed onto the grid. */
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* CSS for each card. */
+.card-grid {
+    background-color: var(--card-hover-bg-color);
+    margin: 2%;
+    height: 95%;
+    width: 180px;
+    /* This rounds the corners of the border */
+    border-radius: 5px;
+    margin-left: var(--margin-val-auto);
+    margin-right: var(--margin-val-auto);
+
+    text-align: center;
+
+    padding: 3%;
+
+}
+
+/* CSS for artist image */
+.card-grid img {
+    height: 150px;
+    /* Max width sets the max width of the elements. It prevents the elements from exceeding the max width value. */
+    max-width: 100%;
+    width: 90%;
+    margin-left: var(--margin-val-auto);
+    margin-right: var(--margin-val-auto);
+    margin-top: 4%;
+}
+
+.card-grid h4 {
+    margin: 6%;
+    margin-bottom: 1%;
+
+
+    font-size: var(--h4-fluidText);
+}
+
+.card-grid p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 2%;
+}
+
+/* this sets the display to its parents display value. unset == inherit */
+header {
+    display: unset;
+}
+
+
+.audioElements {
+    width: 100%;
+}
+
+.upcomingEventsStyle {
+    margin: var(--margin-val-auto);
+    width: 50%;
+}
+
+.audioElements div {
+    padding-left: 30%;
+}
+
+.audioElements span {
+    display: inline-block;
+    /* It vertically aligns the element in the middle. */
+    vertical-align: middle;
+    padding-bottom: 4%;
+}
+
+
+.audioElements h3,
+.upcomingEventsStyle h3 {
+    padding-top: 4%;
+    text-align: center;
+}
+
+.upcomingEventsStyle video {
+    width: 100%;
+}
+
+.audioElements audio {
+    width: 40%;
+}
+
+footer {
+    text-align: center;
+}
+
+nav label {
+    /* hides the element */
+    display: none;
+}
+
+nav li {
+    /* It means the all the list items are on one line.*/
+    display: inline;
+}
+
+#navbar-btn {
+    /* Hides checkbox(created for mobile devices) */
+    display: none;
+}
+
+.card-grid:hover {
+    /* when a user hovers over artist card the cursor appears as pointer */
+    cursor: pointer;
+    /* Zooms the artist card when hovered over */
+    transform: scale(1.17);
+}
+
+.navBarLinks:hover {
+    background-color: var(--card-hover-bg-color);
+    padding: 2%;
+}
+
+/* media queries */
+
+/* responsive navbar for small screens */
+
+@media only screen and (max-width: 741px) {
+
+    .flex-item-nav {
+        padding-bottom: 2%;
+        padding-right: 7%;
+        text-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+    }
+
+    .name {
+        padding-left: 0;
+    }
+
+    .name h1 {
+        margin-bottom: 0%;
+        padding-left: 5%;
+        margin-top: 5%;
+    }
+
+
+    .nav ul {
+        left: 0;
+        /* position is set to absolute which it is positioned absolutely to its first positioned ancestor. */
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        padding-left: 0;
+        box-sizing: border-box;
+        background-color: var(--bg-color);
+        max-height: 0;
+        /* set the transition for drop down navbar for mobile devices */
+        transition: max-height 0.15s ease-out;
+        /* Hides any overflow of text outside its length */
+        overflow: hidden;
+        /* transition when nav bar is closed */
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav ul li {
+        /* sets the display to bloxk */
+        display: block;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .nav label {
+        display: block;
+        padding: 0px 10px;
+        font-size: 30px;
+        cursor: pointer;
+        /* it floats the element to right */
+        float: right;
+    }
+
+    .nav a {
+        width: 100%;
+        display: block;
+    }
+
+    #navbar-btn:checked~ul {
+        max-height: 540px;
+        transition: all 1s ease-in-out;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .audioElements audio {
+        width: 100%;
+    }
+
+    .upcomingEventsStyle {
+        width: 98%;
+    }
+
+    .audioElements div {
+        width: 95%;
+        padding: 0%;
+        margin: var(--margin-val-auto);
+    }
+
+    .audioElements span {
+        text-align: center;
+        width: 100%;
+    }
+
+    .card-grid-container {
+        /* sets the number of grid columns to 1 */
+        grid-template-columns: 1fr;
+        /* sets row gap to 0 because otherwise the grid was overflowing and overlapping with the next element. */
+        grid-row-gap: 0;
+    }
+
+    .card-grid {
+        width: 100%;
+        height: 95%;
+        padding: 1%;
+        box-sizing: border-box;
+    }
+
+    .card-grid img {
+        height: 225px;
+        border-radius: 5px;
+    }
+
+    .card-grid h4 {
+        margin: 3%;
+        margin-bottom: 1%;
+    }
+
+    /* targets any p elements within .card-grid class */
+    .card-grid p {
+        padding: 1%;
+    }
+
+    .flex-item-nav {
+        padding-right: 0;
+    }
+
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 635px) {
+
+    .audioElements audio {
+        width: 70%;
+        margin: var(--margin-val-auto);
+        display: block;
+    }
+
+    .upcomingEventsStyle {
+        width: 75%;
+    }
+
+    .audioElements div {
+        width: 95%;
+        padding: 0%;
+    }
+
+    .audioElements span {
+        text-align: center;
+        width: 100%;
+    }
+
+    .audioElements h3 {
+        padding-top: 40%;
+        text-align: center;
+    }
+
+    .card-grid-container {
+        /* set the number of columns in a grid to 2 */
+        grid-template-columns: repeat(2, 1fr);
+        /* sets row gap */
+        grid-row-gap: 3%;
+    }
+}
+
+@media only screen and (min-width: 636px) and (max-width: 966px) {
+
+    .audioElements audio {
+        width: 48%;
+        margin: var(--margin-val-auto);
+        display: block;
+    }
+
+    .upcomingEventsStyle {
+        width: 58%;
+    }
+
+    .audioElements div {
+        width: 95%;
+        padding: 0%;
+    }
+
+    .audioElements span {
+        text-align: center;
+        width: 100%;
+    }
+
+    .audioElements h3 {
+        padding-top: 15%;
+        text-align: center;
+    }
+
+    .card-grid-container {
+        /* set the number of columns in a grid to 3 */
+        grid-template-columns: repeat(3, 1fr);
+        /* sets gap between rows */
+        grid-row-gap: 3%;
+        /* sets gap b/w columns */
+        grid-column-gap: 4%;
+    }
+}
+
+@media only screen and (min-width: 967px) and (max-width: 1233px) {
+
+    .audioElements h3 {
+        padding-top: 10%;
+        text-align: center;
+    }
+
+    .audioElements audio {
+        width: 50%;
+    }
+
+    .upcomingEventsStyle {
+        width: 60%;
+    }
+
+    .card-grid-container {
+         /* set the number of columns in a grid to 4 */
+        grid-template-columns: repeat(4, 1fr);
+        /* sets gap between rows */
+        grid-row-gap: 5%;
+        /* sets gap between columns */
+        grid-column-gap: 1%;
+    }
+
+}
+
+@media only screen and (min-width: 1234px) and (max-width: 1540px) {
+
+    .audioElements h3 {
+        padding-top: 10%;
+        text-align: center;
+    }
+
+    .audioElements audio {
+        width: 50%;
+    }
+
+    .upcomingEventsStyle {
+        width: 50%;
+    }
+
+    .card-grid-container {
+        /* set the number of columns in a grid to 4 */
+        grid-template-columns: repeat(5, 1fr);
+        /* sets gap between rows */
+        grid-row-gap: 5%;
+        /* sets gap between columns */
+        grid-column-gap: 1%;
+    }
+
+    /* This positino the last two elements of the last row in center  and fixes the height of the last second card*/
+    .last-row-center-element1 {
+        grid-column: 2/span 2;
+        height: 89.7%;
+        margin-top: 1%;
+    }
+
+     /* This positino the last two elements of the last row in center */
+    .last-row-center-element2 {
+        position: relative;
+        right: 50%;
+
+    }
+
+    /* This fixed the image of the last card */
+    .last-row-center-element2 img {
+        height: 155px;
+        padding-top: 5%;
+    }
+
+}
